@@ -1,3 +1,29 @@
-html,body,.map_container {
-    height: 100%;
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.btn {
+    height: 38px;
+    text-align: center;
+}
+
+input {
+    height: 38px;
+    width: 70%;
+}
+
+.searcher {
+    left: 10%;
+    top: 2%;
+    display: inline-block;
+    position: fixed;
+    width: 50%;
+}
+
+.search_icon {
+    font-size: 125%;
 }

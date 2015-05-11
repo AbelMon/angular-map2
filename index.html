@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApplicationModule">
     <head>
         <meta charset="utf-8">
-        <title>Cognits Map</title>
+        <title>Map App</title>
         <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="css/libs/bootstrap.css">
         <link rel="stylesheet" href="css/styles.css">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKO8Yc9-ZjY7u-cQVD3o9gkB21X5SDf-M"></script>
+        <link rel="stylesheet" href="css/libs/fonts.css">
+
+        <!--Angular-->
         <script src="js/shared/angular.js"></script>
+
+        <!--Google map Api-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKO8Yc9-ZjY7u-cQVD3o9gkB21X5SDf-M"></script>
+
+        <!--Angular google map-->
         <script src="js/shared/lodash.js"></script>
         <script src="js/shared/angular-google-maps.js"></script>
+
     </head>
-    <body ng-app="myApplicationModule">
-        <div class="map_container" ng-controller="mainController">
-            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <body ng-controller="mainCtrl">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+            </ui-gmap-marker>
+
+        </ui-gmap-google-map>
+        <div ng-cloak>
+        <ul>
+            <li>coords update ctr: {{coordsUpdates}}</li>
+            <li>dynamic move ctr: {{dynamicMoveCtr}}</li>
+        </ul>
         </div>
+    </div>
+
+        <div class="searcher">
+            <input type="text" id="autocomplete">
+            <button type="button" class="btn btn-primary">
+                <span class="icon-search search_icon"></span>
+            </button>
+        </div>
+
         <!--Modules-->
         <script src="js/app.js"></script>
         <!--Controllers-->
