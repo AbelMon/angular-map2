@@ -1,9 +1,9 @@
 .angular-google-map-container {
-    position: absolute;
-    top: 0;
     bottom: 0;
+    top: 0;
     right: 0;
     left: 0;
+    position: absolute;
 }
 
 .btn {
@@ -26,4 +26,53 @@ input {
 
 .search_icon {
     font-size: 125%;
+}
+
+.iconContainer {
+    text-align: center;
+    display: inline-block;
+    position: fixed;
+}
+
+.markerIconDiv {
+    top: 50px;
+    right: 0;
+}
+
+.favPlacesContainer {
+    top: 150px;
+    right: 4px;
+}
+
+.icon {
+    border: 3px solid;
+    padding: 5px;
+    border-radius: 100%;
+    font-size: 200%;
+    cursor: pointer;
+    color: white;
+}
+
+.icon-location{
+    background-color: #3DB05C;
+}
+
+.icon-star {
+    background-color: #C6C440;
+}
+
+.icon-location:hover {
+    background-color: white;
+    color: #3DB05C;
+}
+
+.icon-star:hover {
+    background-color: white;
+    color: #C6C440;
+}
+
+.placesInterest {
+    margin: 10px;
+    font-weight: bolder;
+    text-shadow: 2px -2px 1px white, 2px 2px 1px white, -2px 2px 1px white, -2px 1px white;
 }
